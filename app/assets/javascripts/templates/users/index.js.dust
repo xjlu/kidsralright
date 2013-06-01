@@ -1,0 +1,9 @@
+<p>User list</p>
+<ul>
+  {#users}
+    <li>
+      <img src="http://www.libertyriders.org/img/icon_user_48x48.gif" alt="">
+      {name}: {age}
+    </li>{~n}
+  {/users}
+</ul>

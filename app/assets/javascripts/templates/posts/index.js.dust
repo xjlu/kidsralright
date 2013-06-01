@@ -1,0 +1,10 @@
+<p>Latest Posts</p>
+{#posts}
+  <div>
+    <p>{content}</p>
+
+    <div style="width: 300px; height: 300px; border: thick solid #666666; overflow: hidden; position: relative;">
+      <img src="{image_url}" style="position: absolute;" onload="OnImageLoad(event);"/>
+    </div>
+  </div>{~n}
+{/posts}
