@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
 gem 'devise'
 gem 'rails', '3.2.13'
 gem 'sqlite3'
