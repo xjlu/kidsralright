@@ -1,7 +1,7 @@
 Kidsralright::Application.routes.draw do
   devise_for :users
 
-  match '/', :to => "application#index"
+  root :to => "application#home_page"
 
   resources :schools do
     resources :classrooms

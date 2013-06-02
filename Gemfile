@@ -18,6 +18,7 @@ end
 
 group :development do
   gem 'backbone-on-rails', '~> 1.0.0.0'
+  gem 'awesome_print'
 end
 
 gem 'jquery-rails', '~> 2.1'

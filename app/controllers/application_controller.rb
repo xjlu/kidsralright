@@ -3,7 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_user!
 
-  def index
-    render :template => 'index'
+
+  def current_account
+  end
+
+  def current_school
+  end
+
+  def home_page
+    render :template => "home_page"
   end
 end
