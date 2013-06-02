@@ -4,7 +4,7 @@ class Kra.Views.PostIndex extends Backbone.View
   className: 'post-list'
 
   # template: _.template($('#user-list-template').html())
-  
+
   initialize: ->
     # bootstrap data
     @posts = new Kra.Collections.Posts [
@@ -14,11 +14,11 @@ class Kra.Views.PostIndex extends Backbone.View
       {image_url: "http://siguealconejoblanco.com/cine/wp-content/uploads/2012/04/iron-man-3.jpg", content: "Iron Man 3"}
     ]
     @render()
-    
+
   render: ->
     _self = @
     dust.render("posts/index", {posts: @posts.toJSON()}, (err, output) ->
       _self.$el.html(output)
     )
-    $('#user').html(@el)
+    $('#timeline').html(@el)
     return @

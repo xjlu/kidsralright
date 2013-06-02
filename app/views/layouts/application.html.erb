@@ -9,8 +9,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="header" class="global-nav">
+  <div class="top-nav">
+    <div class="wrapper">
+      <div class="logo">
+        Kids R Alright
+      </div>
+      <div class="header-links">
+        <ul class="menu">
+          <li>
+            <a href="">
+              <%= current_user.full_name %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-nav">
+    <div class="wrapper">
+    </div>
+  </div>
+</div>
 
-<%= yield %>
+<div id="body">
+  <div class="bodywrapper">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

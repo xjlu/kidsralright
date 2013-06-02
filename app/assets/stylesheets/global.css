@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  /*z-index: 10000;*/
+}
+
+.bodywrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.top-nav {
+  height: 38px;
+  background-color: orange;
+  width: 100%;
+}
+
+.logo {
+  float: left;
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+.header-links {
+  float: right;
+}
+
+ul.menu {
+  margin: 10px;
+  list-style-type: none;
+}
+
+.app-nav {
+
+}

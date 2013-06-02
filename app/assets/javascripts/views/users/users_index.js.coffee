@@ -4,7 +4,7 @@ class Kra.Views.UsersIndex extends Backbone.View
   className: 'user-info'
 
   # template: _.template($('#user-list-template').html())
-  
+
   initialize: ->
     @users = new Kra.Collections.Users [
       {name: 'Xinjiang Lu', age: 31}
@@ -12,7 +12,7 @@ class Kra.Views.UsersIndex extends Backbone.View
       {name: 'Anya Lu', age: 2}
     ]
     @render()
-    
+
   render: ->
     _self = @
     dust.render("users/index", {users: @users.toJSON()}, (err, output) ->
