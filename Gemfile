@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'acts-as-taggable-on' '~> 2.4.1'
 gem 'carrierwave'
 gem 'devise'
-gem 'rails', '3.2.13'
+gem 'rails', '~> 3.2.13'
 gem 'sqlite3'
 
 # Gems used only for assets and not required
