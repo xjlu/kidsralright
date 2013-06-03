@@ -1,5 +1,7 @@
 class School < ActiveRecord::Base
 
+  attr_accessible :name, :address, :account
+
   belongs_to :account
   has_many :students
   has_many :posts

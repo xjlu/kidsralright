@@ -6,6 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-account = Account.create(:name => "Briarcliff Day Care")
-school = School.create(:name => "Briarcliff center", account => account)
+account = Account.find_or_create_by_name("Briarcliff Day Care")
+
+school = School.create(:name => "Briarcliff center", :account => account)
+
 classroom = Classroom.create(:name => "Toddler", :school => school)
+
+# create seed data for template
+template = ActivityTemplate.new
+template.classroom = classroom
+first_a = Activity.new
+first_a.name = "Art"
+first_a.lessons = ["Paint", "Draw", "Cut"]
+template.activities << first_a
+template.save
