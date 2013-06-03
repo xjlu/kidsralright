@@ -1,9 +1,9 @@
 <p>Latest Posts</p>
 {#posts}
-  <div>
+  <div class="post">
     <p>{content}</p>
 
-    <div style="width: 450px; height: 375px; border: thick solid #666666; overflow: hidden; position: relative;">
+    <div style="width: 450px; height: 375px; overflow: hidden; position: relative;">
       <img src="{image_url}" style="position: absolute;" onload="OnImageLoad(event);"/>
     </div>
   </div>{~n}

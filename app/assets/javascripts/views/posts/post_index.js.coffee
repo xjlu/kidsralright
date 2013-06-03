@@ -7,12 +7,18 @@ class Kra.Views.PostIndex extends Backbone.View
 
   initialize: ->
     # bootstrap data
-    @posts = new Kra.Collections.Posts [
-      {image_url: 'http://rootfun.net/images/2012/01/Jennifer-Aniston-2012-2.jpg', content: "Jennifer Aniston"}
-      {image_url: 'http://content.foto.mail.ru/mail/anya.lukyanova.98/_answers/i-3.jpg', content: 'Selena Gomez'}
-      {image_url: "http://hiclasswallpapers.com/wp-content/uploads/2012/06/natalie-portman-poster-01b99.jpg", content: 'Natalie Portman'}
-      {image_url: "http://siguealconejoblanco.com/cine/wp-content/uploads/2012/04/iron-man-3.jpg", content: "Iron Man 3"}
+    post_data = [
+      image_url: "http://cdn.sheknows.com/articles/mom-with-daycare-children.jpg"
+      content: "We are going to have a project: cut and paste time!"
+    ,
+      image_url: "http://lafayettecountyhealth.org/Daycare.jpg"
+      content: "play time: do you want to see how it works?"
+    ,
+      image_url: "http://www.languagesbynancy.com/assets/LbN_Pic-daycare.jpg"
+      content: "All come here, kids! We will have an awesome story time!"
     ]
+    console.log post_data.length
+    @posts = new Kra.Collections.Posts post_data
     @render()
 
   render: ->
