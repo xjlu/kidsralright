@@ -1,4 +1,4 @@
-Account < ActiveRecord::Base
+class Account < ActiveRecord::Base
 
   has_many :schools
 
