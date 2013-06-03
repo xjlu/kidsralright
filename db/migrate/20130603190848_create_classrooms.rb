@@ -6,5 +6,10 @@ class CreateClassrooms < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    create_table :schools do |t|
+      t.string :name
+      t.string :address
+    end
   end
 end
