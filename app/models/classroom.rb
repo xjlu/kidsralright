@@ -1,5 +1,5 @@
 class Classroom < ActiveRecord::Base
-  include tenacity
+  include Tenacity
 
   belongs_to :account
   has_many :students
