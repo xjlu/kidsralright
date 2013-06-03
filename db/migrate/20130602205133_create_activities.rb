@@ -12,6 +12,13 @@ class CreateActivities < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :daily_activities |t|
+      t.references :classes
+      t.references :activites
+      t.references :lessons
+      t.date :date
+    end
+
     # lessons can use acts_as_taggable_on, and using 'lessons' as the context
 
     create_table :lessons do |t|

@@ -74,7 +74,14 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.22)
+    mongoid (3.0.23)
+      activemodel (~> 3.1)
+      moped (~> 1.2)
+      origin (~> 1.0)
+      tzinfo (~> 0.3.22)
+    moped (1.5.0)
     multi_json (1.7.2)
+    origin (1.1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -113,6 +120,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
+    tenacity (0.6.0)
+      activesupport (>= 2.3)
     thor (0.18.1)
     tilt (1.3.7)
     treetop (1.4.12)
@@ -135,7 +144,9 @@ DEPENDENCIES
   devise
   dust-rails
   jquery-rails (~> 2.1)
-  rails (= 3.2.13)
+  mongoid (~> 3.0.0)
+  rails (~> 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
+  tenacity
   uglifier (>= 1.0.3)
