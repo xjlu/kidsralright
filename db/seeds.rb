@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+account = Account.create(:name => "Briarcliff Day Care")
+school = School.create(:name => "Briarcliff center", account => account)
+classroom = Classroom.create(:name => "Toddler", :school => school)

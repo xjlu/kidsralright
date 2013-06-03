@@ -3,6 +3,7 @@ class School < ActiveRecord::Base
   belongs_to :account
   has_many :students
   has_many :posts
+  has_many :classrooms
 
   after_create :create_default_activity_list
 
