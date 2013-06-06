@@ -15,15 +15,17 @@
       <div class="logo">
         Kids R Alright
       </div>
-      <div class="header-links">
-        <ul class="menu">
-          <li>
-            <a href="">
-              <%= current_user.full_name %>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <% if user_signed_in? %>
+        <div class="header-links">
+          <ul class="menu">
+            <li>
+              <a href="">
+                <%= current_user.full_name %>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="app-nav">
