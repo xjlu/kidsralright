@@ -6,6 +6,7 @@ gem 'devise'
 gem "mongoid", "~> 3.0.0"
 gem 'rails', '~> 3.2.13'
 gem 'sqlite3'
+gem "strip_attributes", "~> 1.2"
 gem 'tenacity'
 
 # Gems used only for assets and not required

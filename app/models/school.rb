@@ -1,5 +1,6 @@
 class School < ActiveRecord::Base
 
+  strip_attributes :only => [:name, :address]
   attr_accessible :name, :address, :account
 
   belongs_to :account
