@@ -1,6 +1,6 @@
 class CreateKsrComments < ActiveRecord::Migration
   def change
-    create_table :ksr_comments do |t|
+    create_table :ksrcomments do |t|
       t.text :comment, :null => false
       t.references :commentable, :polymorphic => true
       t.references :user
@@ -9,8 +9,8 @@ class CreateKsrComments < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :ksr_comments, :commentable_type
-    add_index :ksr_comments, :commentable_id
-    add_index :ksr_comments, :user_id
+    add_index :ksrcomments, :commentable_type
+    add_index :ksrcomments, :commentable_id
+    add_index :ksrcomments, :user_id
   end
 end

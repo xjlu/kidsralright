@@ -9,6 +9,6 @@ class Classroom < ActiveRecord::Base
   t_has_one :activity_template
 
   def comment_for date = Date.today
-    self.ksr_comemnts.where(:date_of_comment => date).first
+    self.ksrcomemnts.where(:date_of_comment => date).first
   end
 end
