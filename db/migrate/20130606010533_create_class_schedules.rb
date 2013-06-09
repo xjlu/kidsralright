@@ -5,8 +5,10 @@ class CreateClassSchedules < ActiveRecord::Migration
       t.string :name
       t.date :start_date
       t.date :end_date
+
+      t.timestamps
     end
-    
+
     create_table :schedule_items do |t|
       t.references :schedules
       t.time :start_time

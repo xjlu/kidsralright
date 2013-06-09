@@ -5,6 +5,10 @@ class Classroom < ActiveRecord::Base
 
   belongs_to :school
   has_many :students
+  has_many :ksr_comments, :as => :commentable
   t_has_one :activity_template
 
+  def comment_for date = Date.today
+    self.ksr_comemnts.where(:date_of_comment => date).first
+  end
 end
