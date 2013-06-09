@@ -9,5 +9,13 @@ Kidsralright::Application.routes.draw do
     resources :students
   end
 
+  resources :classrooms do
+    resources :ksrcomments
+  end
+
+  resources :schedules do
+    resources :ksrcomments
+  end
+
   resources :accounts
 end
