@@ -1,7 +1,7 @@
 class CreateClassSchedules < ActiveRecord::Migration
   def change
     create_table :schedules do |t|
-      t.references :classrooms
+      t.references :classroom
       t.string :name
       t.date :start_date
       t.date :end_date
@@ -10,7 +10,7 @@ class CreateClassSchedules < ActiveRecord::Migration
     end
 
     create_table :schedule_items do |t|
-      t.references :schedules
+      t.references :schedule
       t.time :start_time
       t.time :end_time
       t.string :title
