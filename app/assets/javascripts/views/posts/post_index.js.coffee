@@ -17,11 +17,11 @@ class Kra.Views.PostIndex extends Backbone.View
       image_url: "http://www.languagesbynancy.com/assets/LbN_Pic-daycare.jpg"
       content: "All come here, kids! We will have an awesome story time!"
     ]
-    console.log post_data.length
     @posts = new Kra.Collections.Posts post_data
     @render()
 
   render: ->
+    # console.log("PostIndex render")
     _self = @
     dust.render("posts/index", {posts: @posts.toJSON()}, (err, output) ->
       _self.$el.html(output)

@@ -8,4 +8,4 @@ window.Kra =
 
 $ ->
   # userView = new Kra.Views.UsersIndex
-  postView = new Kra.Views.PostIndex
+  return
