@@ -1,4 +1,4 @@
-class CreateKsrComments < ActiveRecord::Migration
+class CreateComments < ActiveRecord::Migration
   def change
     create_table :ksrcomments do |t|
       t.text :comment, :null => false
