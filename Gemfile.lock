@@ -85,6 +85,8 @@ GEM
     origin (1.1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
+    puma (2.0.1)
+      rack (>= 1.1, < 2.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -152,6 +154,7 @@ DEPENDENCIES
   dust-rails
   jquery-rails (~> 2.1)
   mongoid (~> 3.0.0)
+  puma
   rails (~> 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3

@@ -3,10 +3,11 @@ source 'https://rubygems.org'
 # gem 'acts-as-taggable-on', '~> 2.4.1'
 gem 'carrierwave'
 gem 'devise'
-gem "mongoid", "~> 3.0.0"
+gem 'mongoid', '~> 3.0.0'
+gem 'puma'
 gem 'rails', '~> 3.2.13'
 gem 'sqlite3'
-gem "strip_attributes", "~> 1.2"
+gem 'strip_attributes', '~> 1.2'
 gem 'tenacity'
 
 # Gems used only for assets and not required
