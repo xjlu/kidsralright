@@ -32,8 +32,11 @@
       <div class="wrapper">
         <div id="app-menu">
           <ul>
-            <li><a href="/timeline">Timeline</a></li>
-            <li><a href="/schedules">Schedules</a></li>
+            <% ["timeline", "schedules"].each do |item| %>
+              <li>
+                <%= link_to(item.capitalize, send("#{item}_path"), :class => is_active(item)) %>
+              </li>
+            <% end %>.html_safe
           </ul>
         </div>
       </div>
