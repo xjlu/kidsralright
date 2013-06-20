@@ -8,6 +8,7 @@ class Kra.Views.ScheduleIndex extends Backbone.View
       {id: 11, name: 'toddlers-1'}
       {id: 12, name: 'toddlers-2'}
     ]
+    @schedules = @options.schedules
     @render()
 
   render: ->

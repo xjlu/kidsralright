@@ -1,4 +1,4 @@
-class KsrcommentsController < ApplicationController
+class KracommentsController < ApplicationController
   respond_to :json
 
   def index
@@ -19,7 +19,7 @@ class KsrcommentsController < ApplicationController
   end
 
   def update
-    comment = Ksrcomment.find(params[:id])
+    comment = Kracomment.find(params[:id])
     comment.update_attributes(
       :comment => params[:comment]
     )
@@ -28,7 +28,7 @@ class KsrcommentsController < ApplicationController
   end
 
   def destroy
-    res = Ksrcomment.find(params[:id]).destroy
+    res = Kracomment.find(params[:id]).destroy
     respond_with res
   end
 

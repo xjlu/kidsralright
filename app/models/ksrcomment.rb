@@ -1,4 +1,4 @@
-class Ksrcomment < ActiveRecord::Base
+class Kracomment < ActiveRecord::Base
 
   strip_attributes :only => [:comment]
 

@@ -2,7 +2,9 @@
 <script type="text/javascript">
   $(document).ready(function (){
     // console.log('render schedules');
-    var scheduleView = new Kra.Views.ScheduleIndex;
+    var scheduleView = new Kra.Views.ScheduleIndex({
+      schedules: <%= raw @schedules.to_json %>
+    });
   });
 </script>
 <div id="schedules">
