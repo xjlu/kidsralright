@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # gem 'acts-as-taggable-on', '~> 2.4.1'
 gem 'protected_attributes'
+gem 'cancan'
 gem 'carrierwave'
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'jbuilder', '~> 1.2'
