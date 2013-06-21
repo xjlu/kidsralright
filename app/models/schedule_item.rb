@@ -2,7 +2,7 @@ class ScheduleItem < ActiveRecord::Base
 
   strip_attributes :only => [:title, :description, :comments]
 
-  default_scope order(:start_time)
+  default_scope { order(:start_time) }
 
   belongs_to :schedule
   validates :schedule_id, :start_time, :end_time, :title, :presence => true
