@@ -1,0 +1,13 @@
+<label for="start-time">Start Time</label>
+<input name="start-time" value="{start_time}" />
+
+<label for="end-time">End Time</label>
+<input name="end-time" value="{end_time}" />
+<br />
+
+<label for="description">Description</label>
+<input type="text" name="description" value="{description}" />
+
+<input type="hidden" value="{id}" />
+
+<input type="submit" >

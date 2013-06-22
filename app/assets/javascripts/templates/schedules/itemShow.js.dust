@@ -1,0 +1,4 @@
+<div class="item" data-id="{id}">
+  <div class="time">{start_time} -- {end_time}</div>
+  <div class="description">{description}</div>
+</div>

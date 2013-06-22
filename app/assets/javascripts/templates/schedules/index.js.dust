@@ -1,6 +1,6 @@
 <h2>Class Schedules</h2>
 
-<select>
+<select id="schedule-selector">
   {#schedules}
     <option value="{id}">{name}</option>{~n}
   {/schedules}
