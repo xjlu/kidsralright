@@ -1,4 +1,5 @@
 * How to get started?
-  - Rails 3.2 + Ruby 1.9.3
+  - Rails 4.0.0rc2 + Ruby 2.0.0
   - Mongodb for document-oriented data such as activity, diapering, etc.
   - Coffee script + Backbone
+  - Zeus for fast development
