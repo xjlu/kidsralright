@@ -8,7 +8,7 @@ gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'jbuilder', '~> 1.2'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'puma'
-gem 'rails', '~> 4.0.0.rc2'
+gem 'rails', '~> 4.0.0'
 gem 'sqlite3'
 gem 'strip_attributes', '~> 1.2'
 gem 'tenacity'
@@ -17,7 +17,7 @@ gem 'tenacity'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.rc2'
+  gem 'sass-rails',   '~> 4.0.0'
   gem 'coffee-rails', '~> 4.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
