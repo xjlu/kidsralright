@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 # gem 'acts-as-taggable-on', '~> 2.4.1'
-gem 'protected_attributes'
 gem 'cancan'
 gem 'carrierwave'
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'jbuilder', '~> 1.2'
 gem 'mongoid', github: 'mongoid/mongoid'
+gem 'protected_attributes'
 gem 'puma'
 gem 'rails', '~> 4.0.0'
 gem 'sqlite3'
@@ -29,6 +29,7 @@ end
 group :development do
   gem 'backbone-on-rails', '~> 1.0.0.0'
   gem 'awesome_print'
+  gem "bullet", "~> 4.6.0"
 end
 
 gem 'jquery-rails', '~> 2.1'
