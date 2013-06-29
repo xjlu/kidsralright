@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'cancan'
 gem 'carrierwave'
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+gem 'dust-rails'
 gem 'jbuilder', '~> 1.2'
+gem 'jquery-rails', '~> 2.1'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'protected_attributes'
 gem 'puma'
@@ -12,6 +14,7 @@ gem 'rails', '~> 4.0.0'
 gem 'sqlite3'
 gem 'strip_attributes', '~> 1.2'
 gem 'tenacity'
+
 
 
 # Gems used only for assets and not required
@@ -31,9 +34,6 @@ group :development do
   gem 'awesome_print'
   gem "bullet", "~> 4.6.0"
 end
-
-gem 'jquery-rails', '~> 2.1'
-gem 'dust-rails'
 
 group :doc do
   gem 'sdoc', require: false
