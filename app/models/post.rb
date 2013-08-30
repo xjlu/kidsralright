@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
 
   validate :school, :presence => true
   validate :message, :presence => true
+
+  has_many :students
 end
