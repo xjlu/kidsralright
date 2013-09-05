@@ -28,6 +28,12 @@
   float: right;
 }*/
 
+.post-divide {
+  height: 1px;
+  width: 100%;
+  color: #EEE;
+  background-color:#EEE;
+}
 /*.post {
   border: solid;
   margin: 10px;

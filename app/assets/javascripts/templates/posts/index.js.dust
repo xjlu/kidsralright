@@ -1,11 +1,19 @@
-<p>Latest Posts</p>
+<p>>> Latest Posts</p>
 {#posts}
   <div class="post">
-    <p>{content}</p>
-
-    <!-- <div style="width: 450px; height: 375px; overflow: hidden; position: relative;"> -->
+    <hr class="post-divide">
     <div class="thumbnail">
       <img src="{image_url}" onload="OnImageLoad(event);"/>
+    </div>
+    <p>{content}</p>
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li><a href="#">Jonathan</a></li>
+        <li class="muted">.</li>
+        <li><a href="#">July 13, 2012</a></li>
+        <li class="muted">.</li>
+        <li><a href="#">Share</a></li>
+      </ul>
     </div>
   </div>{~n}
 {/posts}

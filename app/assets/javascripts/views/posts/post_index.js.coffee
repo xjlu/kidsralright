@@ -9,7 +9,7 @@ class Kra.Views.PostIndex extends Backbone.View
     # bootstrap data
     post_data = [
       image_url: "http://cdn.sheknows.com/articles/mom-with-daycare-children.jpg"
-      content: "We are going to have a project: cut and paste time!"
+      content: "We are going to have a project: cut and paste time! We are going to have a project: cut and paste time! We are going to have a project: cut and paste time!"
     ,
       image_url: "http://lafayettecountyhealth.org/Daycare.jpg"
       content: "play time: do you want to see how it works?"
