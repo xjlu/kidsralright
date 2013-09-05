@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 # gem 'acts-as-taggable-on', '~> 2.4.1'
+gem 'bootstrap-sass'
 gem 'cancan'
 gem 'carrierwave'
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
