@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable
 
+  mount_uploader :avatar, AvatarUploader
+
   strip_attributes :only => [:email, :first_name, :last_name]
 
   # Setup accessible (or protected) attributes for your model

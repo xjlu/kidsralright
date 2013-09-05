@@ -8,4 +8,6 @@ class Post < ActiveRecord::Base
   validate :message, :presence => true
 
   has_many :students
+  # mount a photo attachment
+  mount_uploader :photo, PhotoUploader
 end
