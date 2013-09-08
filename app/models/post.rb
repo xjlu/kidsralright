@@ -9,5 +9,5 @@ class Post < ActiveRecord::Base
 
   has_many :students
   # mount a photo attachment
-  mount_uploader :photo, PhotoUploader
+  has_many :photos
 end
