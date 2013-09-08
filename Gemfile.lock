@@ -110,6 +110,7 @@ GEM
     multi_json (1.7.7)
     origin (1.1.0)
     orm_adapter (0.4.0)
+    pg (0.16.0)
     polyglot (0.3.3)
     protected_attributes (1.0.1)
       activemodel (>= 4.0.0.beta, < 5.0)
@@ -192,6 +193,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails (~> 2.1)
   mongoid!
+  pg
   protected_attributes
   puma
   rails (~> 4.0.0)
