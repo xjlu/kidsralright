@@ -6,6 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# seed account
+user = User.new
+user.email = "admin@exmaple.com"
+user.password = "password123!"
+user.password_confirmation = "password123!"
+user.skip_confirmation!
+user.save!
+
 accounts = []
 ["Briarcliff Day Care", "Bright Horizons Family Solutions"].each do |name|
   accounts << Account.where(:name => name).first_or_create!
