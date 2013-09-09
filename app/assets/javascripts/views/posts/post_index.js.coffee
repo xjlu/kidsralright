@@ -1,6 +1,6 @@
 class Kra.Views.PostIndex extends Backbone.View
 
-  tagName: 'div'
+  tagName: 'div' # by default
   className: 'post-list'
 
   # template: _.template($('#user-list-template').html())
@@ -18,13 +18,10 @@ class Kra.Views.PostIndex extends Backbone.View
       content: "All come here, kids! We will have an awesome story time!"
     ]
     @posts = new Kra.Collections.Posts post_data
-    @render()
 
   render: ->
-    # console.log("PostIndex render")
     _self = @
     dust.render("posts/index", {posts: @posts.toJSON()}, (err, output) ->
       _self.$el.html(output)
     )
-    $('#timeline').html(@el)
     return @

@@ -17,6 +17,7 @@
 //= require backbone
 //= require ICanHaz
 //= require dust-core
+//= require backbone-forms
 //= require kidsralright
 //= require_tree ./templates
 //= require_tree ./models

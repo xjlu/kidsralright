@@ -1,12 +1,13 @@
 <script type="text/javascript">
-  $(document).ready(function (){
+  $(document).ready(function () {
     // console.log('render timeline');
     var postView = new Kra.Views.PostIndex;
+    $("#timeline").html(postView.render().el);
   });
 </script>
 
 <div class="container">
-	<div class="span3"></div>
-	<div id="timeline" class="span6">
-	</div>
+  <div class="span3"></div>
+  <div id="timeline" class="span6">
+  </div>
 </div>

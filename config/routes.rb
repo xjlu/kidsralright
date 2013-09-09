@@ -18,4 +18,6 @@ Kidsralright::Application.routes.draw do
   end
 
   resources :accounts
+
+  resources :posts
 end
