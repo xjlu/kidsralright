@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   belongs_to :creator, :class_name => 'User'
   has_many :photos
 
-  validate :school, :presence => true
+  validate :classroom, :presence => true
+  validate :creator, :presense => true
   validate :message, :presence => true
 end
