@@ -21,4 +21,5 @@ class Kra.Views.PostNew extends Backbone.View
     @form.commit()
     @model.save {},
       success: (model, response) ->
+        # backbone 1.0 is adding {at: 0} to options for unshift
         _self.collection.unshift(model)
