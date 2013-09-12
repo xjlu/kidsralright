@@ -3,6 +3,10 @@ class Kra.Views.PostShow extends Backbone.View
 
   render: ->
     _self = @
-    dust.render 'posts/show', {model: @model.toJSON()}, (err, output) ->
+    data =
+      message: @model.message
+      created_at: moment(@model.get("created_at")).format("ddd, MMM Do YYYY HH:MM a")
+
+    dust.render 'posts/show', data, (err, output) ->
       _self.$el.html(output)
     return @
