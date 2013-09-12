@@ -1,0 +1,13 @@
+<div class="thumbnail">
+  <img src="{model.image_url}" onload="OnImageLoad(event);"/>
+</div>
+<p>{model.message}</p>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li><a href="#">Jonathan</a></li>
+    <li class="muted">.</li>
+    <li><a href="#">July 13, 2012</a></li>
+    <li class="muted">.</li>
+    <li><a href="#">Share</a></li>
+  </ul>
+</div>

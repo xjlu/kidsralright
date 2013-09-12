@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    render :json => Post.all
+    render :json => Post.order('id DESC').all
   end
 
   def create

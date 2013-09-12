@@ -18,15 +18,16 @@ class Kra.Views.PostIndex extends Backbone.View
       content: "All come here, kids! We will have an awesome story time!"
     ]
     # @posts = new Kra.Collections.Posts post_data
-    @posts = new Kra.Collections.Posts;
+    # @posts = new Kra.Collections.Posts;
 
   # we have to do this in a callback, otherwise it's always a good idea
   # to bootstrap data for page loading
   render: ->
     _self = @
-    @posts.fetch
-      success: ->
-        dust.render "posts/index", {posts: _self.posts.toJSON()}, (err, output) ->
-          _self.$el.html(output)
+    # @collection.fetch
+    #   success: ->
+    #     console.log 'success'
+    #     dust.render "posts/index", {posts: _self.collection.toJSON()}, (err, output) ->
+    #       _self.$el.html(output)
 
     return @
