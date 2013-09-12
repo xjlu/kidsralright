@@ -12,9 +12,9 @@ class Kra.Models.Post extends Backbone.Model
 
   initialize: ->
 
-  url: ->
-    base_url = '/posts';
-    if (@isNew())
-      return base_url;
-    else
-      return base_url + '/' + this.id
+  # url: ->
+  #   base_url = '/posts';
+  #   if (@isNew())
+  #     return base_url;
+  #   else
+  #     return base_url + '/' + this.id

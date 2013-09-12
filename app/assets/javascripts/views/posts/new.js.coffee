@@ -19,4 +19,9 @@ class Kra.Views.PostNew extends Backbone.View
   submit: (e) ->
     e.preventDefault()
     @form.commit()
-    @post.save()
+    post_list = new Kra.Collections.Posts
+    post_list.fetch()
+    post = post_list.create({
+      message: @post.message
+    })
+    # @post.save()

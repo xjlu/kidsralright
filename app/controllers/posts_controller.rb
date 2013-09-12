@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def index
+    render :json => Post.all
   end
 
   def create
@@ -10,7 +11,7 @@ class PostsController < ApplicationController
     p.creator = User.first
     p.save
 
-    render :json => p
+    render :json => p, :status => :created
   end
 
 end
