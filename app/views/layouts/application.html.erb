@@ -13,71 +13,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
+
 <body>
-
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="#">MoziCare</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Support</a></li>
-          <li class="divider-vertical"></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--   <div id="header" class="global-nav">
-    <div id="top-nav">
-      <div class="wrapper">
-        <div class="logo">
-          Kids R Alright
-        </div>
-        <% if user_signed_in? %>
-          <div class="header-links">
-            <ul class="menu">
-              <li>
-                <a href="">
-                  <%= current_user.full_name %>
-                </a>
-              </li>
-            </ul>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div id="app-nav">
-      <div class="wrapper">
-        <div id="app-menu">
-          <ul>
-            <% ["timeline", "schedules"].each do |item| %>
-              <li>
-                <%= link_to(item.capitalize, send("#{item}_path"), :class => is_active(item)) %>
-              </li>
-            <% end %>.html_safe
+  <div>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">MoziCare</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">Sign In</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
- -->
-  <div class="main-app">
-    <div class="container">
-      <div class="row">
-        <div class="span9"><%= yield %></div>
-        <div class="span3">
-          <h2>About Us</h2>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span3">
+        <p>Kids R Alright</p>
+
+        <p>A bridge between education centers and parents/guardians.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+      </div>
+      <div class="span9">
+        <%= yield %>
       </div>
     </div>
   </div>
@@ -93,5 +61,6 @@
       </ul>
     </div>
   </footer>
+
 </body>
 </html>

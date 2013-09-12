@@ -16,7 +16,9 @@ class Kra.Views.PostNew extends Backbone.View
     return @
 
   submit: (e) ->
+    _self = @
     e.preventDefault()
     @form.commit()
-    @collection.create @model.toJSON()
-    # @post.save()
+    @model.save {},
+      success: (model, response) ->
+        _self.collection.unshift(model)

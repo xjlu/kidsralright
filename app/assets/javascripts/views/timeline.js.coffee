@@ -15,6 +15,10 @@ class Kra.Views.Timeline extends Backbone.View
     @.$el.append(@postList.render().el)
     return @
 
-  addOne: (post) ->
+  addOne: (post, collection, options) ->
     post = new Kra.Views.PostShow model: post
-    @.$(".post-list").append(post.render().el)
+    $el = @.$(".post-list")
+    if options and options.at is 0
+      $el.prepend(post.render().el)
+    else
+      $el.append(post.render().el)
