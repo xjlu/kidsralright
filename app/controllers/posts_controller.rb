@@ -14,4 +14,12 @@ class PostsController < ApplicationController
     render :json => p, :status => :created
   end
 
+  def update
+    p = Post.find(:id)
+    p.message = params[:message]
+    p.save
+
+    render :json => p, :status => :ok
+  end
+
 end
