@@ -1,13 +1,17 @@
-<div class="thumbnail">
-  <img src="{image_url}" onload="OnImageLoad(event);"/>
+<div class="entry">
+  <div class="thumbnail">
+    <img src="{image_url}" onload="OnImageLoad(event);"/>
+  </div>
+  <p>{message}</p>
+  <div class="meta-post">
+    <ul class="nav nav-pills">
+      <li><a href="#">Jonathan</a></li>
+      <li class="muted">.</li>
+      <li><a href="#">{created_at}</a></li>
+      <li class="muted">.</li>
+      <li class="delete"><a href="#">delete</a></li>
+    </ul>
+  </div>
 </div>
-<p>{message}</p>
-<div class="container">
-  <ul class="nav nav-pills">
-    <li><a href="#">Jonathan</a></li>
-    <li class="muted">.</li>
-    <li><a href="#">{created_at}</a></li>
-    <li class="muted">.</li>
-    <li><a href="#">Share</a></li>
-  </ul>
+<div class="edit-entry" style="display:none;">
 </div>

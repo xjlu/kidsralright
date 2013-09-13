@@ -15,11 +15,20 @@ class PostsController < ApplicationController
   end
 
   def update
-    p = Post.find(:id)
+    p = Post.find(params[:id])
     p.message = params[:message]
     p.save
 
     render :json => p, :status => :ok
+  end
+
+  def destroy
+    p = Post.find(params[:id])
+    if p.destroy
+      head :no_content, status: :ok
+    else
+      head :no_content, status: :unprocessed_entity
+    end
   end
 
 end

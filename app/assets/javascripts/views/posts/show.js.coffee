@@ -1,5 +1,9 @@
 class Kra.Views.PostShow extends Backbone.View
+
   className: 'post'
+  events:
+    'hover': 'showDelete'
+    'click .delete': "handleDelete"
 
   render: ->
     _self = @
@@ -10,3 +14,17 @@ class Kra.Views.PostShow extends Backbone.View
     dust.render 'posts/show', data, (err, output) ->
       _self.$el.html(output)
     return @
+
+  showMe: ->
+    alert(@model.get("id"));
+
+  showDelete: ->
+    $el.find(".meta-post ul").append("<li>delete</li>")
+
+  handleDelete: (e) ->
+    e.preventDefault()
+    alert("delete " + @model.get("id"))
+    _self = @
+    @model.destroy
+      success: (model, response) ->
+        _self.remove()
