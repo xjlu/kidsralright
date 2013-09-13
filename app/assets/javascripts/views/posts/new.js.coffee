@@ -5,10 +5,10 @@ class Kra.Views.PostNew extends Backbone.View
     'submit': 'submit'
 
   initialize: ->
-    @model = new Kra.Models.Post
-    @form = new Backbone.Form({model: @model}).render()
 
   render: ->
+    @model = new Kra.Models.Post
+    @form = new Backbone.Form({model: @model}).render()
     _self = @
     dust.render "posts/new", {}, (err, output) ->
       _self.form.$el.append(output)
@@ -23,3 +23,4 @@ class Kra.Views.PostNew extends Backbone.View
       success: (model, response) ->
         # backbone 1.0 is adding {at: 0} to options for unshift
         _self.collection.unshift(model)
+        _self.render() # re-render the form, reset the form
