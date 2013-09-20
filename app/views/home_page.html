@@ -4,7 +4,18 @@
     $("#timeline").html(appView.render().el);
   });
 </script>
-<div class="row">
-<div id="timeline" class="span6"></div>
-<div class="span3">Additional information</div>
+  <div class="row">
+    <div class="span3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/feed">Feed</a></li>
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </div>
+    <div class="span9">
+      <div class="row">
+        <div id="timeline" class="span6"></div>
+        <div class="span3">Additional information</div>
+      </div>
+    </div>
+  </div>
 </div>
