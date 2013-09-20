@@ -1,7 +1,9 @@
 Kidsralright::Application.routes.draw do
   devise_for :users
-  get "/signin", to: "devise/session#new"
-  get "/signout", to: "devise/session#destroy"
+  devise_scope :user do
+    get "/signin", to: "devise/sessions#new"
+    get "/signout", to: "devise/sessions#destroy"
+  end
 
   root to: "application#home_page"
   match "/timeline", controller: "timeline", action: "index", via: [:get]
