@@ -8,11 +8,16 @@
 
 # seed account
 user = User.new
-user.email = "admin@exmaple.com"
+user.email = "lu@mozibox.com"
 user.password = "password123!"
 user.password_confirmation = "password123!"
 user.skip_confirmation!
 user.save!
+
+# seed roles
+%w(director teacher guardian).each do |role|
+  Role.create(name: role)
+end
 
 accounts = []
 ["Briarcliff Day Care", "Bright Horizons Family Solutions"].each do |name|

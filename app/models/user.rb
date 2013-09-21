@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
          :validatable, :confirmable
 
   mount_uploader :avatar, AvatarUploader
+  has_and_belongs_to_many :roles, join_table: "users_roles"
 
   strip_attributes :only => [:email, :first_name, :last_name]
 
