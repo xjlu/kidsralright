@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
     self.school.classrooms if is_teacher? || is_director?
   end
 
+  def classroom_ids
+    self.classrooms.map(&:id)
+  end
+
   def user_roles
     @user_roles ||= self.roles
   end

@@ -39,7 +39,7 @@ ucsf_school = School.where(
   name: "The University Child Care Center at Mission Bay",
   account: accounts[1]).first_or_create!
 %w(pelican dolphin whale).each do |name|
-  Classroom.where(:name => name, :school => school).first_or_create!
+  Classroom.where(:name => name, :school => ucsf_school).first_or_create!
 end
 
 # create class schedule for "Infants-2"

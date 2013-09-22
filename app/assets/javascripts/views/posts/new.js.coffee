@@ -9,6 +9,7 @@ class Kra.Views.PostNew extends Backbone.View
   render: ->
     @model = new Kra.Models.Post
     @form = new Backbone.Form({model: @model}).render()
+    @form.fields.classroom_id.editor.setOptions(new Kra.Collections.Classrooms())
     _self = @
     dust.render "posts/new", {}, (err, output) ->
       _self.form.$el.append(output)

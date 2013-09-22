@@ -1,6 +1,7 @@
 class Kra.Models.Post extends Backbone.Model
   schema:
-    classroom:
+    classroom_id:
+      title: 'Classroom'
       type: 'Select'
       options: []
     message:

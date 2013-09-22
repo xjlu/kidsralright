@@ -7,8 +7,8 @@ class PostsController < ApplicationController
   def create
     p = Post.new
     p.message = params[:message]
-    p.classroom = Classroom.find_by_name("dolphin") # for testing
-    p.creator = User.first
+    p.classroom_id = params.require(:classroom_id)
+    p.creator = current_user
     p.save
 
     render :json => p, :status => :created

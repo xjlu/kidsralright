@@ -2,8 +2,8 @@ class ClassroomsController < ApplicationController
   respond_to :json
 
   def index
-    @school = School.find(params[:id])
-    respond_with @school.classrooms
+    classroom_list = current_user.classrooms
+    respond_with classroom_list
   end
 
   def create
