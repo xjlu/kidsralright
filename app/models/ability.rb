@@ -34,42 +34,13 @@ class Ability
   end
 
   def build_permissions
-    if is_director?
+    if user.is_director?
       can :manage, :all
     end
 
-    if is_teacher?
+    if user.is_teacher?
       can [:read, :create], Post, classroom: {school_id: user.school_ids}
     end
-  end
-
-  def user_roles
-    @user_roles ||= @user.roles
-  end
-
-  # define helper methods for role checking
-  def is_director?
-    user_roles.include?(director_role)
-  end
-
-  def is_teacher?
-    user_roles.include?(teacher_role)
-  end
-
-  def is_guardian?
-    user_roles.include?(guardian_role)
-  end
-
-  def director_role
-    @director_role ||= Role.find_by_name("director")
-  end
-
-  def teacher_role
-    @teacher_role ||= Role.find_by_name("teacher")
-  end
-
-  def guardian_role
-    @guardian_role ||= Role.find_by_name("guardian")
   end
 
 end

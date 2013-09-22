@@ -22,4 +22,38 @@ class User < ActiveRecord::Base
   def full_name
     @full_name ||= [first_name, last_name].join(" ").strip
   end
+
+  # a teacher can access his school's classrooms
+  def classrooms
+    self.school.classrooms if is_teacher? || is_director?
+  end
+
+  def user_roles
+    @user_roles ||= self.roles
+  end
+
+  # define helper methods for role checking
+  def is_director?
+    user_roles.include?(director_role)
+  end
+
+  def is_teacher?
+    user_roles.include?(teacher_role)
+  end
+
+  def is_guardian?
+    user_roles.include?(guardian_role)
+  end
+
+  def director_role
+    @director_role ||= Role.find_by_name("director")
+  end
+
+  def teacher_role
+    @teacher_role ||= Role.find_by_name("teacher")
+  end
+
+  def guardian_role
+    @guardian_role ||= Role.find_by_name("guardian")
+  end
 end
