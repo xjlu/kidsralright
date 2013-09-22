@@ -7,6 +7,7 @@ class School < ActiveRecord::Base
   has_many :students
   has_many :posts
   has_many :classrooms
+  has_many :users
 
   after_create :create_default_activity_list
 

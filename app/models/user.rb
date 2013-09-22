@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
   has_and_belongs_to_many :roles, join_table: "users_roles"
+  belongs_to :school
+  belongs_to :default_classroom, class_name: "Classroom"
 
   strip_attributes :only => [:email, :first_name, :last_name]
 

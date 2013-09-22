@@ -5,6 +5,7 @@ class Classroom < ActiveRecord::Base
 
   belongs_to :school
   has_many :students
+  has_many :users
   has_many :ksr_comments, :as => :commentable
   has_many :schedules
   t_has_one :activity_template
