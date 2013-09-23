@@ -1,5 +1,6 @@
 class Kra.Views.PostNew extends Backbone.View
   className: "new-post"
+  templateName: "posts/new"
 
   events:
     'submit': 'submit'
@@ -9,9 +10,15 @@ class Kra.Views.PostNew extends Backbone.View
   render: ->
     @model = new Kra.Models.Post
     @form = new Backbone.Form({model: @model}).render()
-    @form.fields.classroom_id.editor.setOptions(new Kra.Collections.Classrooms())
+    # set options using a collection
+    classroom_list = new Kra.Collections.Classrooms()
     _self = @
-    dust.render "posts/new", {}, (err, output) ->
+
+    classroom_list.fetch
+      success: (collection) ->
+        _self.form.fields.classroom_id.editor.setOptions(collection)
+        _self.form.$el.find("[name=classroom_id]").val(Kra.default_classroom_id)
+    dust.render this.templateName, {}, (err, output) ->
       _self.form.$el.append(output)
     _self.$el.html(@form.el)
     return @

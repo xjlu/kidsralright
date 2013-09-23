@@ -1,5 +1,6 @@
 <script type="text/javascript">
   $(document).ready(function () {
+    Kra.default_classroom_id = <%= current_user.default_classroom.id%>;
     var appView = new Kra.Views.Timeline;
     $("#timeline").html(appView.render().el);
   });
