@@ -23,8 +23,9 @@ class Kra.Views.PostShow extends Backbone.View
 
   handleDelete: (e) ->
     e.preventDefault()
-    alert("delete " + @model.get("id"))
-    _self = @
-    @model.destroy
-      success: (model, response) ->
-        _self.remove()
+    r = confirm("Do you want to delete this post?")
+    if r is true
+      _self = @
+      @model.destroy
+        success: (model, response) ->
+          _self.remove()

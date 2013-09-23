@@ -1,0 +1,8 @@
+<div class="span3">
+  <ul class="nav nav-pills nav-stacked">
+    <%= nav_link 'Feed', '/' %>
+    <% if current_user.is_director? %>
+      <%= nav_link 'Admin', '/admin' %>
+    <% end %>
+  </ul>
+</div>

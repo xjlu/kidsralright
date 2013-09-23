@@ -13,4 +13,13 @@ module ApplicationHelper
     (tab_name == selected) ? "active" : nil
   end
 
+  # take advantage of current_page method to highlight the active tab
+  def nav_link(link_text, link_path)
+    class_name = current_page?(link_path) ? 'active' : nil
+
+    content_tag(:li, :class => class_name) do
+      link_to link_text, link_path
+    end
+  end
+
 end
